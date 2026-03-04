@@ -1,0 +1,158 @@
+/* =======================
+   SIGNIN CSS - Sign In specific stilovi
+   ====================== */
+
+/* =========================
+   Sign In Form
+   ========================= */
+.registration-form {
+    max-width: 400px;
+    margin: var(--spacing-xl) auto;
+    background-color: var(--color-white);
+    padding: 2em 2.5em;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: left;
+    font-size: 1em;
+}
+
+/* Sign In heading */
+.registration-form h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    font-size: 1.8em;
+    position: relative;
+}
+
+.registration-form h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-confirm), var(--color-primary));
+    margin: var(--spacing-xs) auto 0;
+    border-radius: 2px;
+}
+
+/* Form inputs */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    padding: 0.4em 0.6em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    transition: var(--transition-fast);
+    width: 100%;
+}
+
+.registration-form input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 64, 128, 0.1);
+}
+
+/* Labels */
+.registration-form label {
+    display: block;
+    margin: 0.6em 0 0.3em;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.registration-form div > label {
+    display: inline;
+    font-weight: normal;
+}
+
+/* Checkbox container */
+.registration-form div:has(input[type="checkbox"]) {
+    margin-bottom: 1em;
+}
+
+/* Sign In button */
+#sign-in-btn {
+    background-color: var(--color-confirm);
+    color: var(--color-white);
+    border: none;
+    padding: 0.7em 2em;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1em;
+    transition: var(--transition-normal);
+}
+
+#sign-in-btn:hover {
+    background-color: var(--color-confirm-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* Links */
+.registration-form a[href*="forgot"] {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.registration-form a[href*="forgot"]:hover {
+    text-decoration: underline;
+}
+
+.terms-link {
+    color: var(--color-confirm);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Back to register button */
+#back-to-register-btn {
+    width: 100%;
+    padding: 0.7em;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    border: none;
+    margin-top: 0.8em;
+    transition: var(--transition-normal);
+    display: block;
+    background-color: var(--color-bg-light);
+    color: var(--color-text);
+}
+
+#back-to-register-btn:hover {
+    background-color: #e9ecef;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Sign In Responzivnost
+   ========================= */
+@media (max-width: 480px) {
+    .registration-form {
+        margin: var(--spacing-lg) 1em;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .registration-form h2 {
+        font-size: 1.6em;
+    }
+    
+    .registration-form input[type="text"],
+    .registration-form input[type="email"],
+    .registration-form input[type="password"] {
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+}

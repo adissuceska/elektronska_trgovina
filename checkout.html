@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!-- Definicija dokumenta kao HTML5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Kodiranje znakova UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsivni dizajn za mobilne uređaje -->
+    <title>Tour Guide Booking Checkout</title>
+    <!-- Učitavanje vanjskih CSS stilova -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <!-- Glavni header sa naslovom i navigacijom -->
+    <header>
+        <h1>Tour Guide Booking Checkout</h1>
+        <!-- Navigacijski meni -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">City Break in Paris</a></li>
+                <li class="search-container">
+                    <input type="text" placeholder="Search tours..." class="search-input" id="searchInput" />
+                    <button class="search-btn" type="button" aria-label="Search" id="searchBtn">🔍</button>
+                </li>
+                <li class="cart-icon">
+                    <!-- Ikona korpe sa brojačem -->
+                    <a href="checkout.html" title="Cart" aria-label="Shopping Cart">🛒
+                    <span class="cart-badge" id="cart-count">3</span></a>
+                </li>
+                <li><a href="sign_in.html">Sign in</a></li>
+                <li><a href="sign_up.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Glavni sadržaj sa checkout formom -->
+    <main>
+        <!-- Glavni checkout form -->
+        <form action="#" method="post" class="checkout-form">
+            <!-- Pregled košarice -->
+            <fieldset class="review-cart">
+                <legend>Review Your Cart</legend>
+                
+                <!-- Paris City Break stavka -->
+                <div class="cart-item">
+                    <div class="tour-info">
+                        <h2>Paris City Break</h2>
+                        <p>1-day guided tour with hotel</p>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">$120</span>
+                        <!-- Količina za Paris -->
+                        <div class="quantity-selector">
+                            <label for="qty-paris" class="sr-only">Quantity</label>
+                            <button type="button" class="qty-btn qty-minus" data-tour="paris">-</button>
+                            <input type="number" id="qty-paris" name="qty-paris" value="1" min="1" max="10" class="qty-input">
+                            <button type="button" class="qty-btn qty-plus" data-tour="paris">+</button>
+                        </div>
+                        <span class="item-total">$120.00</span>
+                    </div>
+                </div>
+
+                <!-- London Weekend Escape stavka -->
+                <div class="cart-item">
+                    <div class="tour-info">
+                        <h2>London Weekend Escape</h2>
+                        <p>1-day walking tour</p>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">$110</span>
+                        <!-- Količina za London -->
+                        <div class="quantity-selector">
+                            <label for="qty-london" class="sr-only">Quantity</label>
+                            <button type="button" class="qty-btn qty-minus" data-tour="london">-</button>
+                            <input type="number" id="qty-london" name="qty-london" value="1" min="1" max="10" class="qty-input">
+                            <button type="button" class="qty-btn qty-plus" data-tour="london">+</button>
+                        </div>
+                        <span class="item-total">$110.00</span>
+                    </div>
+                </div>
+
+                <!-- Rome Historical Tour stavka -->
+                <div class="cart-item">
+                    <div class="tour-info">
+                        <h2>Rome Historical Tour</h2>
+                        <p>1-day cultural tour</p>
+                    </div>
+                    <div class="price-section">
+                        <span class="price">$130</span>
+                        <!-- Količina za Rome -->
+                        <div class="quantity-selector">
+                            <label for="qty-rome" class="sr-only">Quantity</label>
+                            <button type="button" class="qty-btn qty-minus" data-tour="rome">-</button>
+                            <input type="number" id="qty-rome" name="qty-rome" value="1" min="1" max="10" class="qty-input">
+                            <button type="button" class="qty-btn qty-plus" data-tour="rome">+</button>
+                        </div>
+                        <span class="item-total">$130.00</span>
+                    </div>
+                </div>
+
+                <!-- Order Summary sa promo kodom -->
+                <fieldset class="order-summary">
+                    <legend>Order Summary</legend>
+                    <!-- Unos promo koda -->
+                    <div class="promo-code-section">
+                        <input type="text" id="promo-input" class="promo-input" placeholder="Add promo code" name="promo-code">
+                        <button type="button" id="promo-apply" class="promo-btn">Apply</button>
+                    </div>
+                </fieldset>
+                
+                <!-- Ukupni iznos -->
+                <div class="cart-totals">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span class="amount subtotal">$360.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Tax (10%):</span>
+                        <span class="amount tax">$36.00</span>
+                    </div>
+                    <hr>
+                    <div class="total-row total">
+                        <span>Total:</span>
+                        <span class="amount grand-total">$396.00</span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Podaci o dostavi -->
+            <fieldset>
+                <legend>Shipping Information</legend>
+                <!-- Ime i prezime -->
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
+
+                <!-- Adresa -->
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Street and Number" required />
+
+                <!-- Dodatna adresa -->
+                <label for="apt">Apartment, floor, etc. (optional)</label>
+                <input type="text" id="apt" name="apt" placeholder="Apt 101, Floor 3" />
+
+                <!-- Izbor grada -->
+                <label for="city">City</label>
+                <select id="city" name="city" required>
+                    <option value="" disabled selected>Select City</option>
+                    <option value="newyork">New York</option>
+                    <option value="london">London</option>
+                    <option value="paris">Paris</option>
+                    <option value="tokyo">Tokyo</option>
+                </select>
+
+                <!-- Izbor države -->
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                </select>
+
+                <!-- Poštanski broj -->
+                <label for="postalcode">Postal Code</label>
+                <input type="text" id="postalcode" name="postalcode" placeholder="12345" required />
+
+                <!-- Spremanje kontakata -->
+                <div>
+                    <input type="checkbox" id="save-contact" name="save-contact" />
+                    <label for="save-contact">Save contact information for future bookings</label>
+                </div>
+            </fieldset>
+
+            <!-- Podaci o plaćanju -->
+            <fieldset>
+                <legend>Payment</legend>
+                <!-- Metode plaćanja -->
+                <div>
+                    <!-- PayPal opcija -->
+                    <button type="button" id="paypal-button" name="payment-method" value="paypal" class="paypal-modern">
+                        <span class="paypal-icon">💳</span>
+                        <span>PayPal</span>
+                        <span class="paypal-secure">✓ Secure</span>
+                    </button>
+                    <!-- Plaćanje gotovinom -->
+                    <button type="button" id="cash-button" name="payment-method" value="cash">Pay with Cash</button>
+                </div>
+
+                <!-- Kreditna kartica -->
+                <label for="cardname">Cardholder Name</label>
+                <input type="text" id="cardname" name="cardname" placeholder="John Doe" />
+
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" name="cardnumber" placeholder="1234 5678 9012 3456" maxlength="19" />
+
+                <label for="expirydate">Expiry Date</label>
+                <input type="month" id="expirydate" name="expirydate" />
+
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" name="cvc" placeholder="123" maxlength="4" />
+
+                <!-- Spremanje kartice -->
+                <div>
+                    <input type="checkbox" id="save-card" name="save-card" />
+                    <label for="save-card">Save card information for future payments</label>
+                </div>
+            </fieldset>
+
+            <!-- Gumb za završavanje kupovine -->
+            <button type="submit" id="submit-button">Confirm Booking</button>
+        </form>
+    </main>
+
+    <!-- Footer sa linkovima -->
+    <footer>
+        <!-- Kompanija -->
+        <div>
+            <h2>Company</h2>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+
+        <!-- Podrška -->
+        <div>
+            <h2>Support</h2>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+        <!-- Vodiči -->
+        <div>
+            <h2>Guides</h2>
+            <ul>
+                <li><a href="#">Become a guide</a></li>
+                <li><a href="#">Guide login</a></li>
+                <li><a href="#">Tour policies</a></li>
+            </ul>
+        </div>
+
+        <!-- Društvene mreže -->
+        <p>Follow us on social media:</p>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook icon" />
+                    Facebook
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn icon" />
+                    LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram icon" />
+                    Instagram
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="X icon" />
+                    X
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript funkcionalnost -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- Definicija dokumenta kao HTML5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Kodiranje znakova UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsivni dizajn za mobilne uređaje -->
+    <title>Sign Up - Tour Guide App</title>
+    <!-- Učitavanje CSS stilova -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sign_up.css" />
+</head>
+<body>
+    <!-- Glavni header sa navigacijom -->
+    <header>
+        <h1>Sign Up - Tour Guide App</h1>
+        <!-- Navigacijski meni -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">City Break in Paris</a></li>
+                <li class="search-container">
+                    <input type="text" placeholder="Search tours..." class="search-input" id="searchInput" />
+                    <button class="search-btn" type="button" aria-label="Search" id="searchBtn">🔍</button>
+                </li>
+                <li class="cart-icon">
+                    <!-- Korpa sa brojačem -->
+                    <a href="checkout.html" title="Cart" aria-label="Shopping Cart">🛒
+                    <span class="cart-badge" id="cart-count">3</span></a>
+                </li>
+                <li><a href="sign_in.html">Sign in</a></li>
+                <li><a href="sign_up.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Glavni sadržaj: registracijska forma -->
+    <main>
+        <!-- Forma za kreiranje naloga -->
+        <form action="#" method="post" class="registration-form">
+            <!-- Naslov forme -->
+            <h2>Create Your Account</h2>
+
+            <!-- Unos punog imena -->
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+
+            <!-- Unos email adrese -->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required />
+
+            <!-- Unos lozinke -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required />
+
+            <!-- Potvrda lozinke -->
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required />
+
+            <!-- Terms & Conditions checkbox -->
+            <div>
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms">I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a></label>
+            </div>
+
+            <!-- Akcijski gumbovi -->
+            <button type="submit" id="sign-up-btn">CREATE ACCOUNT</button>
+            <!-- Nazad na prijavu -->
+            <button type="button" id="back-to-signin-btn" onclick="window.location.href='sign_in.html'">BACK TO SIGN IN</button>
+        </form>
+    </main>
+
+    <!-- Footer sa linkovima -->
+    <footer>
+        <!-- Dodan h2 za pravilnu hijerarhiju -->
+        <h2></h2>
+        <!-- Company sekcija -->
+        <div>
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+
+        <!-- Support sekcija -->
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+        <!-- Guides sekcija -->
+        <div>
+            <h3>Guides</h3>
+            <ul>
+                <li><a href="#">Become a guide</a></li>
+                <li><a href="#">Guide login</a></li>
+                <li><a href="#">Tour policies</a></li>
+            </ul>
+        </div>
+
+        <!-- Društvene mreže -->
+        <p>Follow us on social media:</p>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook icon" />
+                    Facebook
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn icon" />
+                    LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram icon" />
+                    Instagram
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="X icon" />
+                    X
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript skripta -->
+    <script src="js/main.js"></script>
+</body>
+</html>

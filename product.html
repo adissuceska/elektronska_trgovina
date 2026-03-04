@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- Definicija dokumenta kao HTML5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Kodiranje znakova UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsivni dizajn za mobilne uređaje -->
+    <title>City Break in Paris - Certified local tourist guides</title>
+    <!-- Učitavanje vanjskih CSS stilova -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+    <!-- Glavni header stranice -->
+    <header>
+        <h1>Certified local tourist guides</h1>
+        <!-- Navigacijski meni -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">City Break in Paris</a></li>
+                <li class="search-container">
+                    <input type="text" placeholder="Search tours..." class="search-input" id="searchInput" />
+                    <button class="search-btn" type="button" aria-label="Search" id="searchBtn">🔍</button>
+                </li>
+                <li class="cart-icon">
+                    <!-- Ikona korpe sa brojačem -->
+                    <a href="checkout.html" title="Cart" aria-label="Shopping Cart">🛒
+                    <span class="cart-badge" id="cart-count">3</span></a>
+                </li>
+                <li><a href="sign_in.html">Sign in</a></li>
+                <li><a href="sign_up.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Glavni sadržaj stranice -->
+    <main>
+        <!-- Hero sekcija sa glavnom slikom -->
+        <section class="hero-product">
+            <img src="images/01.jpg" alt="City Break in Paris" class="hero-image" />
+            <div class="hero-overlay">
+                <h1>City Break in Paris</h1>
+                <p class="price">€120 <span>per person</span></p>
+                <!-- <button> za Book Now (link zadržan u onclick) -->
+                <button class="cta-button" onclick="window.location.href='checkout.html'" type="button">Book Now</button>
+            </div>
+        </section>
+
+        <!-- Detalji proizvoda -->
+        <section class="product-details">
+            <div class="container">
+                <div class="details-grid">
+                    <!-- Opis ture -->
+                    <div class="description">
+                        <h2>Discover the Magic of Paris</h2>
+                        <p>Pridružite se našem certificiranom lokalnom vodiču na nezaboravnom dvodnevnom city break-u kroz Paris! Posetićete najpoznatije znamenitosti, uživaćete u francuskoj kuhinji i otkriti skrivene dragulje koje samo lokalci znaju.</p>
+                        
+                        <!-- Šta je uključeno -->
+                        <h3>Šta je uključeno:</h3>
+                        <ul>
+                            <li>Dvodnevni vodič kroz Paris (8 sati dnevno)</li>
+                            <li>Poseta Eiffelovom tornju, i Notre Dame-u</li>
+                            <li>Romantična šetnja Seine-om</li>
+                            <li>Degustacija francuskog sira</li>
+                            <li>Maksimalno 6 osoba po grupi</li>
+                        </ul>
+
+                        <!-- Raspored ture -->
+                        <h3>Raspored ture:</h3>
+                        <ul>
+                            <li><strong>Dan 1:</strong> Eiffelov toranj, Šampska polja, Luvr</li>
+                            <li><strong>Dan 2:</strong> Montmartre, Sacré-Coeur, Seine cruise</li>
+                        </ul>
+                    </div>
+
+                    <!-- Booking informacije i slike -->
+                    <div class="booking-info">
+                        <!-- Cjenovna kartica -->
+                        <div class="price-card">
+                            <h3>€120</h3>
+                            <p>per person</p>
+                            <ul>
+                                <li>✓ Mala grupa (max 6)</li>
+                                <li>✓ Certifikovani vodič</li>
+                                <li>✓ Besplatan otkazivanje 24h</li>
+                            </ul>
+                            <!-- <button> za Check Availability (link zadržan u onclick) -->
+                            <button class="cta-button" onclick="window.location.href='checkout.html'" type="button">Check Availability</button>
+                        </div>
+                        <!-- Dostupni datumi -->
+                        <h4>Dostupni datumi:</h4>
+                        <ul class="dates">
+                            <li>25.01.2026. - <span class="available">Dostupno</span></li>
+                            <li>01.02.2026. - <span class="available">Dostupno</span></li>
+                            <li>08.02.2026. - <span class="full">Popunjeno</span></li>
+                        </ul>
+
+                        <!-- Galerija slika -->
+                        <h4>Galerija:</h4>
+                        <div class="gallery">
+                            <img src="images/14.jpg" alt="Eiffel Tower" />
+                            <img src="images/15.jpg" alt="Louvre" />
+                            <img src="images/16.jpg" alt="Seine" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recenzije korisnika -->
+        <section class="reviews">
+            <h2>Šta kažu naši gosti</h2>
+            <div class="reviews-grid">
+                <blockquote>
+                    <p>"Najbolja tura koju sam ikada imao! Vodič Ana je bila fantastična."</p>
+                    <cite>- Maria S., Portugal</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"Profesionalno, zabavno i puno informacija. Preporučujem svima!"</p>
+                    <cite>- John D., UK</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer sa linkovima -->
+    <footer>
+        <!-- Dodan h2 za pravilnu hijerarhiju -->
+        <h2></h2>
+        
+        <!-- Company sekcija -->
+        <div>
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+
+        <!-- Support sekcija -->
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+        <!-- Guides sekcija -->
+        <div>
+            <h3>Guides</h3>
+            <ul>
+                <li><a href="#">Become a guide</a></li>
+                <li><a href="#">Guide login</a></li>
+                <li><a href="#">Tour policies</a></li>
+            </ul>
+        </div>
+
+        <!-- Društvene mreže -->
+        <p>Follow us on social media:</p>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook icon" />
+                    Facebook
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn icon" />
+                    LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram icon" />
+                    Instagram
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="X icon" />
+                    X
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript  -->
+    <script src="js/main.js"></script>
+</body>
+</html>

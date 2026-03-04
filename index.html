@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certified local tourist guides</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+    <header>
+        <h1>Certified local tourist guides</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">City Break in Paris</a></li>
+                <li class="search-container">
+                    <input type="text" placeholder="Search tours..." class="search-input" id="searchInput" />
+                    <button class="search-btn" type="button" aria-label="Search" id="searchBtn">🔍</button>
+                </li>
+                <li class="cart-icon">
+                    <a href="checkout.html" title="Cart" aria-label="Shopping Cart">🛒
+                    <span class="cart-badge" id="cart-count">3</span></a>
+                </li>
+                <li><a href="sign_in.html">Sign in</a></li>
+                <li><a href="sign_up.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center; margin-bottom: 30px; color: #333;">Inventory Overview</h2>
+        
+        <table class="inventory-table" id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Tour Name</th>
+                    <th>Price (USD) <br><small>🔹 Kliknite za uređivanje</small></th>
+                    <th>Quantity <br><small>🔹 Kliknite za uređivanje</small></th>
+                    <th>Subtotal (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- SVA POLJA contenteditable="true" -->
+                <tr>
+                    <td>City Break in Paris</td>
+                    <td class="price editable" contenteditable="true">120</td>
+                    <td class="qty editable" id="paris-qty" contenteditable="true">25</td>
+                    <td id="paris-subtotal">$3,000</td>
+                </tr>
+                <tr>
+                    <td>London Weekend Escape</td>
+                    <td class="price editable" contenteditable="true">110</td>
+                    <td class="qty editable" id="london-qty" contenteditable="true">18</td>
+                    <td id="london-subtotal">$1,980</td>
+                </tr>
+                <tr>
+                    <td>Rome Historical Tour</td>
+                    <td class="price editable" contenteditable="true">130</td>
+                    <td class="qty editable" id="rome-qty" contenteditable="true">12</td>
+                    <td id="rome-subtotal">$1,560</td>
+                </tr>
+                <tr>
+                    <td>Barcelona City Adventure</td>
+                    <td class="price editable" contenteditable="true">100</td>
+                    <td class="qty editable" id="barcelona-qty" contenteditable="true">30</td>
+                    <td id="barcelona-subtotal">$3,000</td>
+                </tr>
+                <tr>
+                    <td>Amsterdam Canal Tour</td>
+                    <td class="price editable" contenteditable="true">115</td>
+                    <td class="qty editable" id="amsterdam-qty" contenteditable="true">22</td>
+                    <td id="amsterdam-subtotal">$2,530</td>
+                </tr>
+                <tr>
+                    <td>Prague Cultural Walk</td>
+                    <td class="price editable" contenteditable="true">90</td>
+                    <td class="qty editable" id="prague-qty" contenteditable="true">15</td>
+                    <td id="prague-subtotal">$1,350</td>
+                </tr>
+                <tr>
+                    <td>Berlin City Break</td>
+                    <td class="price editable" contenteditable="true">105</td>
+                    <td class="qty editable" id="berlin-qty" contenteditable="true">20</td>
+                    <td id="berlin-subtotal">$2,100</td>
+                </tr>
+                <tr>
+                    <td>Vienna Classical Tour</td>
+                    <td class="price editable" contenteditable="true">125</td>
+                    <td class="qty editable" id="vienna-qty" contenteditable="true">8</td>
+                    <td class="low-stock" id="vienna-subtotal">$1,000</td>
+                </tr>
+                <tr>
+                    <td>Lisbon Old Town Walk</td>
+                    <td class="price editable" contenteditable="true">95</td>
+                    <td class="qty editable" id="lisbon-qty" contenteditable="true">28</td>
+                    <td id="lisbon-subtotal">$2,660</td>
+                </tr>
+                <tr>
+                    <td>Budapest Thermal Baths</td>
+                    <td class="price editable" contenteditable="true">115</td>
+                    <td class="qty editable" id="budapest-qty" contenteditable="true">14</td>
+                    <td id="budapest-subtotal">$1,610</td>
+                </tr>
+                <tr>
+                    <td>Amsterdam Flower Markets</td>
+                    <td class="price editable" contenteditable="true">110</td>
+                    <td class="qty editable" id="flower-qty" contenteditable="true">5</td>
+                    <td class="low-stock" id="flower-subtotal">$550</td>
+                </tr>
+                <tr>
+                    <td>Edinburgh Castle Visit</td>
+                    <td class="price editable" contenteditable="true">120</td>
+                    <td class="qty editable" id="edinburgh-qty" contenteditable="true">19</td>
+                    <td id="edinburgh-subtotal">$2,280</td>
+                </tr>
+                <tr>
+                    <td>Venice Gondola Ride</td>
+                    <td class="price editable" contenteditable="true">140</td>
+                    <td class="qty editable" id="venice-qty" contenteditable="true">9</td>
+                    <td class="low-stock" id="venice-subtotal">$1,260</td>
+                </tr>
+                <tr>
+                    <td>Athens Ancient Sights</td>
+                    <td class="price editable" contenteditable="true">130</td>
+                    <td class="qty editable" id="athens-qty" contenteditable="true">16</td>
+                    <td id="athens-subtotal">$2,080</td>
+                </tr>
+                <tr>
+                    <td>Nice Riviera Tour</td>
+                    <td class="price editable" contenteditable="true">115</td>
+                    <td class="qty editable" id="nice-qty" contenteditable="true">23</td>
+                    <td id="nice-subtotal">$2,645</td>
+                </tr>
+                <tr>
+                    <td>Florence Art Walk</td>
+                    <td class="price editable" contenteditable="true">125</td>
+                    <td class="qty editable" id="florence-qty" contenteditable="true">11</td>
+                    <td id="florence-subtotal">$1,375</td>
+                </tr>
+                <!-- TOTAL red -->
+                <tr class="total-row">
+                    <td><strong>Total</strong></td>
+                    <td id="total-quantity"><strong>265</strong></td>
+                    <td></td>
+                    <td id="grand-total"><strong>$30,980 USD</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Low stock sekcija -->
+        <div id="lowStockSection" class="low-stock-section">
+            <h3>⚠️ Low Stock Alerts (Quantity < 10)</h3>
+            <ul id="lowStockList" class="low-stock-list">
+                <li><strong>Amsterdam Flower Markets:</strong> 5 units</li>
+                <li><strong>Vienna Classical Tour:</strong> 8 units</li>
+                <li><strong>Venice Gondola Ride:</strong> 9 units</li>
+            </ul>
+        </div>
+
+        <div class="summary" id="totalValueSummary">
+            Ukupna vrednost lagera: <span id="finalTotal">30,980 USD</span>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Footer</h2>
+        <div>
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Guides</h3>
+            <ul>
+                <li><a href="#">Become a guide</a></li>
+                <li><a href="#">Guide login</a></li>
+                <li><a href="#">Tour policies</a></li>
+            </ul>
+        </div>
+        <p>Follow us on social media:</p>
+        <ul>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook icon" /> Facebook</a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn icon" /> LinkedIn</a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram icon" /> Instagram</a></li>
+            <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="X icon" /> X</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

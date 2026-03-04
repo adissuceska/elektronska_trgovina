@@ -1,0 +1,443 @@
+/* =========================
+   01. Checkout Form
+   ========================= */
+.checkout-form {
+    max-width: 500px;
+    margin: var(--spacing-xl) auto;
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: left;
+    font-size: 1em;
+}
+
+.checkout-form fieldset {
+    border: 1px solid var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+    padding: 1em 1.5em 1.5em;
+    border-radius: var(--radius-md);
+}
+
+.checkout-form legend {
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    padding: 0 0.5em;
+}
+
+/* Checkout Labels */
+.checkout-form label {
+    display: block;
+    margin: 0.6em 0 0.3em;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.checkout-form div > label {
+    display: inline;
+    font-weight: normal;
+}
+
+.checkout-form fieldset > div {
+    margin-bottom: 1em;
+}
+
+/* =========================
+   02. Review Cart
+   ========================= */
+.review-cart {
+    margin-bottom: var(--spacing-xl);
+    background: linear-gradient(135deg, var(--color-white), #f8f9fa);
+    border: 2px solid rgba(0,64,128,0.1);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.review-cart legend {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    padding: 0 var(--spacing-md);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-confirm));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid rgba(0,64,128,0.08);
+    transition: var(--transition-normal);
+}
+
+.cart-item:hover {
+    background-color: rgba(0,102,204,0.03);
+    transform: translateX(4px);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.tour-info {
+    flex: 1;
+    text-align: left;
+}
+
+.tour-info h2 {
+    font-size: 1.3rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.tour-info p {
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    min-width: 280px;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-price);
+    white-space: nowrap;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    background: var(--color-white);
+    border: 2px solid rgba(0,64,128,0.2);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.qty-btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.qty-btn:hover {
+    background: var(--color-primary-dark);
+    transform: scale(1.05);
+}
+
+.qty-btn:active {
+    transform: scale(0.98);
+}
+
+.qty-input {
+    width: 60px;
+    height: 36px;
+    border: none;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: transparent;
+    -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.item-total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-price);
+    min-width: 70px;
+    text-align: right;
+}
+
+.cart-totals {
+    background: linear-gradient(135deg, var(--color-primary-darker), var(--color-primary));
+    padding: var(--spacing-lg);
+    color: var(--color-white);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.total-row.total {
+    margin-top: var(--spacing-md);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-top: var(--spacing-sm);
+    border-top: 2px solid rgba(255,255,255,0.3);
+}
+
+.amount {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.subtotal .amount {
+    color: rgba(255,255,255,0.95);
+}
+
+.tax .amount {
+    color: var(--color-success);
+}
+
+.grand-total {
+    color: var(--color-price) !important;
+    font-size: 1.6rem !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   03. Promo Code
+   ========================= */
+.order-summary {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--color-white), #f8f9fa);
+    border: 2px solid rgba(0,64,128,0.1);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-confirm);
+}
+
+.order-summary legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    padding: 0 var(--spacing-sm);
+    background: linear-gradient(135deg, var(--color-confirm), var(--color-confirm-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.promo-code-section {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-sm);
+}
+
+.promo-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 2px solid rgba(0,64,128,0.2);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    color: var(--color-text);
+    font-weight: 500;
+    transition: var(--transition-normal);
+}
+
+.promo-input:focus {
+    border-color: var(--color-confirm);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,102,204,0.15), var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.promo-input::placeholder {
+    color: rgba(51,51,51,0.6);
+    font-weight: 400;
+}
+
+.promo-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--color-confirm), var(--color-confirm-hover));
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(0,102,204,0.25);
+    flex-shrink: 0;
+}
+
+.promo-btn:hover {
+    background: linear-gradient(135deg, var(--color-confirm-hover), var(--color-primary-dark));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,102,204,0.35);
+}
+
+.promo-btn:active {
+    transform: translateY(-1px);
+}
+
+.promo-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================
+   04. Payment Buttons
+   ========================= */
+#paypal-button, #cash-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5em 1.2em;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    font-size: 1em;
+    margin-right: 1em;
+    user-select: none;
+    border: 2px solid transparent;
+    transition: var(--transition-fast);
+}
+
+#paypal-button {
+    background-color: #003087;
+    color: var(--color-white);
+    border-color: #002060;
+}
+
+#paypal-button:hover {
+    background-color: #002060;
+    border-color: #001040;
+    transform: translateY(-1px);
+}
+
+#cash-button {
+    background-color: #f8f9fa;
+    color: var(--color-text);
+    border-color: #dee2e6;
+}
+
+#cash-button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   05. Submit Button
+   ========================= */
+#submit-button {
+    background-color: var(--color-confirm);
+    color: var(--color-white);
+    border: none;
+    padding: 0.7em 2em;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1em;
+    transition: var(--transition-normal);
+}
+
+#submit-button:hover {
+    background-color: var(--color-confirm-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* =========================
+   06. Checkout Responzivnost
+   ========================= */
+@media (max-width: 700px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    .price-section {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .quantity-selector {
+        order: 3;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .item-total {
+        order: 2;
+        margin-left: auto;
+    }
+    
+    .promo-code-section {
+        flex-direction: column;
+    }
+    
+    .promo-input {
+        min-width: 100%;
+    }
+    
+    .promo-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-form {
+        margin: var(--spacing-lg) 1em;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .review-cart {
+        margin: var(--spacing-lg) 1em;
+    }
+    
+    .cart-totals {
+        padding: var(--spacing-md);
+    }
+    
+    .total-row.total {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        text-align: center;
+    }
+    
+    .grand-total {
+        font-size: 1.4rem !important;
+    }
+    
+    .order-summary {
+        margin: var(--spacing-md) 1em;
+        padding: var(--spacing-md);
+    }
+}
